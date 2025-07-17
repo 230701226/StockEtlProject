@@ -1,0 +1,5 @@
+# Correlation heatmap
+plt.figure(figsize=(8, 6))
+sns.heatmap(df[scale_cols + ["Return"]].corr(), annot=True, cmap="coolwarm")
+plt.title("Feature Correlation Heatmap")
+plt.show()

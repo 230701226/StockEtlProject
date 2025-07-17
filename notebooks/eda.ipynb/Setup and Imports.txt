@@ -1,0 +1,6 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv("../output/processed_data.csv", parse_dates=["Date"])
+df.head()

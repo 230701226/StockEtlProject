@@ -1,0 +1,13 @@
+# Plot price trends
+plt.figure(figsize=(12, 5))
+for symbol in df["Stock Symbol"].unique()[:5]:
+    subset = df[df["Stock Symbol"] == symbol]
+    plt.plot(subset["Date"], subset["Close"], label=symbol)
+
+plt.title("Normalized Close Prices")
+plt.xlabel("Date")
+plt.ylabel("Scaled Close Price")
+plt.legend()
+plt.tight_layout()
+plt.grid(True)
+plt.show()

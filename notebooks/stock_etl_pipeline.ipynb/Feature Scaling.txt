@@ -1,0 +1,6 @@
+# Normalize numeric features
+scale_cols = ["Close", "Volume", "RollingMean", "Volatility"]
+scaler = StandardScaler()
+df[scale_cols] = scaler.fit_transform(df[scale_cols])
+
+df.head()

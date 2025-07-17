@@ -1,0 +1,6 @@
+plt.figure(figsize=(10, 4))
+sns.histplot(df["Return"], bins=50, kde=True)
+plt.title("Distribution of Returns")
+plt.xlabel("Daily Return")
+plt.grid()
+plt.show()

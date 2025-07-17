@@ -1,0 +1,12 @@
+plt.figure(figsize=(14, 6))
+for symbol in df["Stock Symbol"].unique():
+    subset = df[df["Stock Symbol"] == symbol]
+    plt.plot(subset["Date"], subset["Close"], label=symbol)
+
+plt.title("Stock Prices Over Time")
+plt.xlabel("Date")
+plt.ylabel("Normalized Close")
+plt.legend()
+plt.grid()
+plt.tight_layout()
+plt.show()

@@ -1,0 +1,3 @@
+print("Shape:", df.shape)
+df.info()
+df.describe().T

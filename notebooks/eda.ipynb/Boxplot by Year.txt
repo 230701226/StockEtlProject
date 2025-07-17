@@ -1,0 +1,5 @@
+plt.figure(figsize=(10, 5))
+sns.boxplot(x="Year", y="Close", data=df)
+plt.title("Close Price Distribution by Year")
+plt.grid()
+plt.show()

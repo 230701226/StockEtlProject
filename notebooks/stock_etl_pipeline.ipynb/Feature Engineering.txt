@@ -1,0 +1,7 @@
+# Calculate returns, rolling mean, volatility
+df["Return"] = df["Close"].pct_change()
+df["RollingMean"] = df["Close"].rolling(window=7).mean()
+df["Volatility"] = df["Close"].rolling(window=7).std()
+
+df.dropna(inplace=True)
+df.head()

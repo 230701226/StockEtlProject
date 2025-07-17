@@ -1,0 +1,13 @@
+# Load all valid CSVs from /data
+files = [os.path.join(data_dir, f) for f in os.listdir(data_dir) if f.endswith(".csv")]
+df_list = []
+
+for f in files:
+    df = pd.read_csv(f)
+    if {"Date", "Close", "Volume"}.issubset(df.columns):
+        if "Stock Symbol" not in df.columns:
+            df["Stock Symbol"] = os.path.basename(f).split("_")[0]
+        df_list.append(df)
+
+df = pd.concat(df_list, ignore_index=True)
+df.head()

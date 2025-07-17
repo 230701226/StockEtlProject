@@ -1,0 +1,2 @@
+import missingno as msno
+msno.matrix(df)
